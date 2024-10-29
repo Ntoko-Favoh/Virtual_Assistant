@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ntokozo Mkhize's portfolio showcasing virtual assistant services.">
+    <meta name="keywords" content="Virtual Assistant, Project Management, HR, Admin">
+    <title>Ntokozo Mkhize - Virtual Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .profile-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.glow-effect {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow-effect::before, 
+.glow-effect::after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border-radius: 50%;
+    background: linear-gradient(
+        45deg,
+        #e6fb04,
+        #ff6600,
+        #00ff66,
+        #00ffff,
+        #ff00ff,
+        #ff0099,
+        #6e0dd0,
+        #099fff
+    );
+    background-size: 400%;
+    animation: glowing 20s linear infinite;
+    z-index: 1;
+}
+
+.glow-effect::after {
+    filter: blur(15px);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.profile-image {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.glow-effect:hover .profile-image {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 350px;
+        height: 350px;
+    }
+    .glow-effect {
+        width: 350px;
+        height: 350px;
+    }
+    .profile-image {
+        width: 330px;
+        height: 330px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 250px;
+        height: 250px;
+    }
+    .glow-effect {
+        width: 250px;
+        height: 250px;
+    }
+    .profile-image {
+        width: 230px;
+        height: 230px;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Ntokozo<span>.</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hey, I'm <span class="name-highlight">NTOKOZO MKHIZE</span></h1>
+            <h1>a<span class="animated-text">&nbsp;Virtual&nbsp;Assistant</span></h1>
+            <p>As a virtual assistant, Creativity and precision are at the heart of my work. I bring my clients' visions to 
+                life through innovative and impactful designs. I thrive on turning complex ideas into clear, attractive, and effective visual solutions.
+                 With expertise in responsive design, project management, and human resources, I bring a wide range of skills to ensure your success.</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:your-email@example.com">ntoko.favo@gmail.com</a></p>
+                <p>Location: Durban, Kwa-Zulu  Natal, South Africa</p>
+
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/yourwhatsappnumber" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+
+            <div class="button-group">
+                <a href="cv.html" class="btn btn-primary">Download CV</a>
+                <a href="path-to-your-cv.pdf" download class="btn btn-secondary">Hire Me</a>
+            </div>
+        </div>
+        <div class="profile-container">
+            <div class="glow-effect">
+                <img src="Ntoko.jpg" alt="Profile" class="profile-image">
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a dedicated Virtual Assistant with a passion for helping businesses grow and succeed. With my background in Human Resources and extensive experience in administrative tasks, I bring a unique blend of skills to support your business needs.</p>
+                    <p id="more-content" style="display: none;">
+                        My journey began with a National Diploma in Human Resource Management, and I've since expanded my expertise to include various digital tools and project management methodologies. I believe in continuous learning and staying updated with the latest industry trends to provide the best service to my clients.
+                    </p>
+                    <button onclick="toggleContent()" class="btn btn-secondary">Read More</button>
+                </div>
+
+                
+                <div class="education-cert">
+                    <h3>Education</h3>
+                    <div class="education">
+                        <h4>National Diploma in Human Resource Management</h4>
+                        <p>Elangeni College• 2018-2021</p>
+                    </div>
+
+                    <h3>Certifications</h3>
+                    <div class="cert-gallery">
+                        <div class="cert-card">
+                            <img src="Supply Chain.png" alt="Supply Chain Management" class="cert-image">
+                            <div class="cert-info">
+                                <h4>Supply Chain Management</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-card">
+                            <img src="Data Entry.png" alt="Data Entry Cert" class="cert-image">
+                            <div class="cert-info">
+                                <h4>Data Entry</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-card">
+                            <img src="Digital  Marketing.png" alt="Digital Marketing Cert" class="cert-image">
+                            <div class="cert-info">
+                                <h4>Digital Marketing</h4>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <img src="Virtual Assistance.png" alt="Virtual Assistant Cert" class="cert-image">
+                            <div class="cert-info">
+                                <h4>Virtual Assistant</h4>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <img src="Basic Computer Literacy.png" alt="Basic Computer Literacy Cert" class="cert-image">
+                            <div class="cert-info">
+                                <h4>Basic Computer Literacy</h4>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <img src="Data Analytics.png" alt="Data Analytics using Excel" class="cert-image">
+                            <div class="cert-info">
+                                <h4>Data Analytics using Excel</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <h2>Experience</h2>
+        <h3>Freelance Virtual Assistant | 2023 - 2024</h3>
+        <ul>
+            <li>Manage emails and calendars for multiple clients</li>
+            <li>Conduct research and prepare reports</li>
+            <li>Handle travel arrangements and expense reports</li>
+            <li>Provide customer support and manage social media accounts</li>
+            <li>Organize and facilitate online meetings using Zoom and Microsoft Teams</li>
+            <li>Create visual content for social media and presentations using Canva</li>
+            <li>Manage and organize files using Dropbox and other cloud storage solutions</li>
+        </ul>
+
+        <h3>Administrative Assistant, Ink Arise Recreation Initiative (NPO)| 2022 - 2023</h3>
+        <ul>
+            <li>Assisted executives with daily administrative tasks</li>
+            <li>Coordinated meetings and managed office supplies</li>
+            <li>Prepared presentations and reports</li>
+            <li>Utilized various productivity tools to streamline office processes</li>
+        </ul>
+
+        <h3>Human Resources Administrator, Servant Ace | 2021 - 2022</h3>
+        <ul>
+            <li>Processed payroll and benefits for employees</li>
+            <li>Assisted with recruitment, onboarding, and orientation for new hires</li>
+            <li>Maintained employee records and ensured compliance with HR policies</li>
+            <li>Supported performance management and training initiatives</li>
+        </ul>
+    </section>
+    <section class="services" id="services">
+        <div class="container">
+            <h2>My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Email Management</h3>
+                    <p>Inbox organization, email filtering, and response management.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Calendar Management</h3>
+                    <p>Scheduling, appointment setting, and reminder services.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Data Entry</h3>
+                    <p>Accurate and efficient data input and organization.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Project Coordination</h3>
+                    <p>Timeline management, task tracking, and team coordination.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Customer Support</h3>
+                    <p>Assisting customers via phone, email, and chat support.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Research Assistance</h3>
+                    <p>Conducting in-depth research and compiling findings.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Digital Marketing</h3>
+                    <p>Content creation, SEO, and online campaign management.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>Designing and developing user-friendly websites and landing pages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            
+            <!-- Technical Skills -->
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item">Data Entry</div>
+                    <div class="skill-item">Python Programming</div>
+                    <div class="skill-item">MS Office Suite</div>
+                    <div class="skill-item">Project Management Tools</div>
+                    <div class="skill-item">Social Media Management</div>
+                    <div class="skill-item">Research and Reporting</div>
+                    <div class="skill-item">Calendar and Email Management</div>
+                    <div class="skill-item">HTML, CSS, JavaScript</div>
+                    <div class="skill-item">Responsive Design</div>
+                    <div class="skill-item">CMS Platforms (e.g.  WordPress)</div>
+                    <div class="skill-item">SEO and Analytics</div>
+    
+            </div>
+                
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-item">Communication</div>
+                    <div class="skill-item">Time Management</div>
+                    <div class="skill-item">Problem Solving</div>
+                    <div class="skill-item">Team Coordination</div>
+                    <div class="skill-item">Adaptability</div>
+                    <div class="skill-item">Attention to Detail</div>
+                    <div class="skill-item">Customer Service</div>
+                    <div class="skill-item">Leadership</div>
+                </div>
+            </div>
+            
+            <!-- Tools Proficiency -->
+                    <div class="tools-proficiency">
+                        <h3>Tools Proficiency</h3>
+                        <div class="tools-icons">
+                            <div class="tool-item">
+                                <i class="fas fa-video" style="color: #2C8EDD;"></i>
+                                <p>Zoom</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-paint-brush" style="color: #00C4CC;"></i>
+                                <p>Canva</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-dropbox" style="color: #007EE5;"></i>
+                                <p>Dropbox</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-slack" style="color: #4A154B;"></i>
+                                <p>Slack</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-users" style="color: #F25022;"></i>
+                                <p>Microsoft Teams</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-google-drive" style="color: #4285F4;"></i>
+                                <p>Google Drive</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-project-diagram" style="color: #007bff;"></i>
+                                <p>Asana</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-trello" style="color: #0079BF;"></i>
+                                <p>Trello</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-cut" style="color: #E67E22;"></i>
+                                <p>CapCut</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-skype" style="color: #00AFF0;"></i>
+                                <p>Skype</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-video" style="color: #34A853;"></i>
+                                <p>Google Meet</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-calendar-alt" style="color: #006edc;"></i>
+                                <p>Calendly</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-google" style="color: #EA4335;"></i>
+                                <p>Google Suite</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-gitlab" style="color: #fca121;"></i>
+                                <p>Sandbox</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-code" style="color: #68217A;"></i>
+                                <p>Visual Studio</p>
+                            </div>
+                             <div class="tool-item">
+                                <i class="fas fa-database" style="color: #4479A1;"></i>
+                                <p>MySQL Workbench</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-chart-line" style="color: #f2c811;"></i>
+                                <p>Power BI</p>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-sticky-note" style="color: #000000;"></i>
+                                <p>Notion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Read More functionality
+        function toggleContent() {
+            const moreContent = document.getElementById('more-content');
+            const btn = document.querySelector('.about-text .btn');
+            if (moreContent.style.display === 'none') {
+                moreContent.style.display = 'block';
+                btn.textContent = 'Read Less';
+            } else {
+                moreContent.style.display = 'none';
+                btn.textContent = 'Read More';
+            }
+        }
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
